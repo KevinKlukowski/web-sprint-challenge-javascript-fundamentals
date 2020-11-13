@@ -153,9 +153,11 @@ function CuboidMaker(attrs){
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-CuboidMaker.prototype.Volume = function() {
-  return this.length * this.width * this.height;
-}
+  CuboidMaker.prototype.Volume = function() {
+     return this.length * this.width * this.height;
+      
+  }
+
 
 
 
@@ -165,7 +167,7 @@ CuboidMaker.prototype.Volume = function() {
   2 * (length * width + length * height + width * height)  */
 
 CuboidMaker.prototype.SurfaceArea = function () {
-  return 2 * (this.length * this.width) + (this.length * this.height) + (this.width * this.height);
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
 
@@ -175,7 +177,6 @@ CuboidMaker.prototype.SurfaceArea = function () {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
 const cuboid = new CuboidMaker(4, 5, 5);
-console.log(cuboid.SurfaceArea());
 
 
 
