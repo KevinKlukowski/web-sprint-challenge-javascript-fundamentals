@@ -167,7 +167,7 @@ function CuboidMaker(attrs){
   2 * (length * width + length * height + width * height)  */
 
 CuboidMaker.prototype.SurfaceArea = function () {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  return 2 * (this.length * this.width) + 2 *(this.length * this.height) + 2 *(this.width * this.height);
 }
 
 
@@ -198,10 +198,11 @@ class CuboidMakerTwo{
     return this.length * this.width * this.height;
   }
   surfaceArea() {
-    return 2 * (this.length * this.width) + (this.length * this.height) + (this.width * this.height);
+    const sur = 2 * (this.length * this.width) + 2 *(this.length * this.height) + 2 *(this.width * this.height);
+      return sur;
   }
 }
-const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
+const cuboidTwo = new CuboidMakerTwo(5, 5, 5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
  console.log(cuboidTwo.volume()); // 100
